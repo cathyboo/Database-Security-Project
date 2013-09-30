@@ -1,0 +1,17 @@
+Introduction
+
+  What is Database Security?
+  Why do we need it?
+
+Risks
+
+  Physical risks; Floods, fires, power outages, theft.
+  Human Error; Software bugs, 
+  Malicious; SQL Injection, MITM,
+  
+
+Security Measures
+
+  Physical; Regular backups. Cloud backups. Active security of server building. Backup generator.
+  Human Error; Control access lists. Access via a controlled interface. Bug/software tests before going live.
+  Malicious; Hashing, Salting of passwords. Clean form inputs for SQL problems.
