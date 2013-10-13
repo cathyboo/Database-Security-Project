@@ -1,0 +1,39 @@
+#######Database Security project Research##########
+
+
+Threats to DB's
+
+	##Physical Threats
+
+          Flooding
+	  Natural Disaster
+	  Fire
+	  Power failure
+	  Theft
+	  
+
+	##Logical Threats 
+
+          Software Bugs 
+	  Human Error 
+	  Hardware Failure 
+
+  
+**flooding notes**
+
+Flooding is an uncontrollable threat to data centres;A flood can cause damage to critical database equipment,services and even in extreme cases structural damage to the building itself. the damage caused can be mitigated through  proper planning and preventative measures. Preventative measures to protect against flooding primarily consist of backing up data offsite and access to services.The key aims involved in preventative measures are to protect critcal data/equipment and to reduce the downtime experienced by clients to a minimum.In the event of a flood any physical medium such as tapes or hard drives may not be accessible depending on the severity of the flood; it is crucial that copies exist outside of the floodzone for easy recovery.This will allow for a faster recovery and until services are fully restored will allow the clients to make alternative arrangments to reduce downtime to their business.
+
+While flooding may not nessecarily damage the datacentre itself it can damage the infrastructure in the surrounding area; as such it is important to keep access to power and telecoms  as long as possible. Data centre will keep a series of backup Generator and a reserve of fuel to allow them to function independent from the local power grid.While this reserve will not be sufficient to run the centre for an extended period of time it will provide a window in which steps can be taken to ensure all critical data can be backed up and saved.
+
+The second stage of flood measures is to protect any critical equipment such as server racks and UPS's from damage.It is important to ensure that as much equipment as possible remains above the water; depending on the equipments location in the building this may not be possible. Equipment can be covered in plastic tarp to help reduce water damage but this is by no means a fool proof solution, after flood waters have receded recovery of the data centre can begin. The first step is to salvage as much equipment as possible and replace any damaged equipment; after the physical system is restored data can then be reloaded onto the systems from the offsite backups.
+
+A recent example of datacentres which where damaged during flooding occured during hurrucane Sandy. Data Centres were cut off from services and in some cases had to run as long as twelve days on reserve fuel.
+
+
+--Flooding References--
+
+http://arstechnica.com/information-technology/2012/10/hurricane-sandy-takes-data-centers-offline-with-flooding-power-outages/
+
+http://arstechnica.com/information-technology/2012/11/how-one-nyc-data-center-survived-hurricane-sandy/
+
+http://www.techrepublic.com/article/disaster-recovery-how-to-protect-your-systems-from-flood-threats/
