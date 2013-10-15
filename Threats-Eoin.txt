@@ -1,0 +1,47 @@
+Threats to DB's
+
+	##Malicious Threats
+
+	Intro
+	Malware Attack;
+		Viruses
+		Trojans
+		Worms
+		Spyware
+		Adware
+		Bots
+
+Although Databases can be configured to only allow local access, increasingly they are placed on the cloud or a specific server, with access allowed through the internet or across a network.  This openess creates possible security threats from malicious planned computer attacks over the network.  Furthermore, increasingly important business, financial and personal information is uploaded into Databases, making them enticing and profitable targets for intruders.
+
+
+Malware Attack;
+
+There are over 600,000 malware programs at large on the internet.  Malware is a term for malicious software, that is designed by intruders to carry out unauthorized activity on a computer or network, these can often be damaging of destructive to a database.
+
+Malware comes in the folowing forms;
+
+Viruses
+
+Viruses are self replicating pieces of software that install themselves on a computer without user consent.  Once installed, they can often carry out harmful attacks, such as stealing memory or CPU activity. They can be very dangerous if they are designed to steal or harm databases.  They can access private information, log keystrokes, corrupt/manipulate data, along with numerous other harmful acts.
+
+Crackers can be very smart about designing viruses to exploit specific security vulnerabilities or use social engineering to fol users into downloading malicious packages.  THere are many different types of virus, such as File-infected viruses and Multipartite viruses.
+
+Trojans
+
+Trojans are malicious programs that disguise themselves as legitimate programs.  Unlike viruses they do not replicate.  They are used to gain access or cause harm to a computer or network.  THere are numerous different types of Trojan.
+
+Worms
+
+Worms can be seen as a specialist version of virus, with the major added danger that they do not need user input to travel from one computer to another.  THey are programmed to automatically exploit networks(internet or LAN) and travel from linked device to linked device. Worms are self-learning and will use information on vulnerabilities they found on one computer to infect the next computer on a network.  A worm will repeat the pattern of infecting, learning and spreading until it has potentially destroyed a whole network.
+
+Spyware
+
+Spyware is a type of virus that monitors your computer use to steal your information without your knowledge.  The information is sent back to the Spyware creator to use as they wish.
+
+Adware
+
+Adware is like spyware as it can gather information on a user without consent, but it can also be used to display targeted ads to a user, often through the form of pop-up web pages.
+
+Bots
+
+ 
