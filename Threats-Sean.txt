@@ -1,39 +1,95 @@
-#######Database Security project Research##########
+
+#######Database Security project ##########
 
 
-Threats to DB's
+*********Summary**************
 
-	##Physical Threats
+Along side malicious attacks physical attacks provide a threat to databases and datacentres.Unlike Malicious attacks , which are carried out intentionally physical threats can originate from a number of non human sources such as Weather, Hardware failure and infrastructure failure. The risk of human related elements is still present ranging from the accidental to the malicious.While these threats cannot be removed outright it is possible to mitigate them; and in the event of there occurence reduce their impact on Data loss and system downtime.	 
 
-          Flooding
-	  Natural Disaster
-	  Fire
-	  Power failure
-	  Theft
-	  
 
-	##Logical Threats 
+Environmental threats to databases covers a number of hazards  including fire  and natural disasters such as flooding ,earthquakes and Forest fires.These threats present a risk to a data centers hardware, The structural integrity of the building they are housed in and while an indirect threat access to services such as power, telecoms and environmental controls.
 
-          Software Bugs 
-	  Human Error 
-	  Hardware Failure 
+**************Fire*********************
 
-  
-**flooding notes**
+A fire in a data centre is a catastrophic event; resulting in damage to critical equipment and data loss as well as service downtime as repairs are carried out.
+
+A Fire can spread quickly through a data centre; causing damage to equipment and endangering personell. Given the risk associated with a fire, any attempts to tackle a large fire will be carried out by emergency services.This small window is enough time for a fire to cause massive damage to a data centers 
+equipment and to potentially destroy any on site backups.
+
+Fires can be caused by a number of sources but by far the most common is faulty equipment or power cables[1].It is important to ensure sources of ignition or potentionial fuel is kept away from any critical equipment. 
+
+
+
+
+*************flooding********************
+
 
 Flooding is an uncontrollable threat to data centres;A flood can cause damage to critical database equipment,services and even in extreme cases structural damage to the building itself. the damage caused can be mitigated through  proper planning and preventative measures. Preventative measures to protect against flooding primarily consist of backing up data offsite and access to services.The key aims involved in preventative measures are to protect critcal data/equipment and to reduce the downtime experienced by clients to a minimum.In the event of a flood any physical medium such as tapes or hard drives may not be accessible depending on the severity of the flood; it is crucial that copies exist outside of the floodzone for easy recovery.This will allow for a faster recovery and until services are fully restored will allow the clients to make alternative arrangments to reduce downtime to their business.
 
-While flooding may not nessecarily damage the datacentre itself it can damage the infrastructure in the surrounding area; as such it is important to keep access to power and telecoms  as long as possible. Data centre will keep a series of backup Generator and a reserve of fuel to allow them to function independent from the local power grid.While this reserve will not be sufficient to run the centre for an extended period of time it will provide a window in which steps can be taken to ensure all critical data can be backed up and saved.
+While flooding may not nessecarily damage the datacentre itself it can damage the infrastructure in the surrounding area, as such it is important to keep access to power and telecoms as long as possible. Data centre will keep a series of backup Generator and a reserve of fuel to allow them to function independent from the local power grid.While this reserve will not be sufficient to run the centre for an extended period of time it will provide a window in which steps can be taken to ensure all critical data can be backed up and saved.
 
 The second stage of flood measures is to protect any critical equipment such as server racks and UPS's from damage.It is important to ensure that as much equipment as possible remains above the water; depending on the equipments location in the building this may not be possible. Equipment can be covered in plastic tarp to help reduce water damage but this is by no means a fool proof solution, after flood waters have receded recovery of the data centre can begin. The first step is to salvage as much equipment as possible and replace any damaged equipment; after the physical system is restored data can then be reloaded onto the systems from the offsite backups.
 
-A recent example of datacentres which where damaged during flooding occured during hurrucane Sandy. Data Centres were cut off from services and in some cases had to run as long as twelve days on reserve fuel.
+A recent example of datacentres which where damaged during flooding occured during hurrucane Sandy. Data Centres were cut off from services and in some cases had to run as long as twelve days on reserve fuel before services were restored[4].
 
 
---Flooding References--
 
-http://arstechnica.com/information-technology/2012/10/hurricane-sandy-takes-data-centers-offline-with-flooding-power-outages/
+********Hardware Failure************
 
-http://arstechnica.com/information-technology/2012/11/how-one-nyc-data-center-survived-hurricane-sandy/
+Given that most databases will run on a continous basis Hardware failure is an expected consequences of operating a data center.There are a number of hardware copmonents which can fail in a database including Memory,CPU's motherboards and power supplys[9].However the most common component failure comes from hard drives.
 
-http://www.techrepublic.com/article/disaster-recovery-how-to-protect-your-systems-from-flood-threats/
+Mechanincal storage is the most cost effective method for storing large volumes of data on a non volatile medium[2]. Due to the drives structure and moving parts, they are more prone to suffer failures than other alternatives such as  solid state drives.
+
+Given the possibility of failure associated with hardware it is paramount that a database be backed up routinely.Hard drive integrity can be increased using techniques such as RAID arrays, which will allow data to be rebuilt from a cluster of Hard drives should one fail.Other hardware should be swapped out as soon as the failure arises to ensure a minimum of downtime for the database. A proactive maintaince schedule will help to reduce the impact of hardware failure on the database.
+
+
+
+**************Human Element****************
+
+
+While the security risks dicsussed above primarily deal with elements outside of control there are physical risks to a data center /data base which can come from a human element, these can range from the unitentional to the malicious.
+
+Encryption of data will make it  difficult to glean any sensitive information from stolen hard drives;data bases and larger Data Centres can contain a myriad of high value equipment.This equipment can range from complex networking equipment such as servers and network switches to fibre cable and tools.
+
+Equipment can also be damaged during a break-in ; one such break-in occured in vodafones Basingstoke data center in the United Kingdom[8].Thieves caused damage to a number of servers resulting a service outage to Vodafones voice SMS and internet services.
+
+It is important to ensure an adequate security system is in place alongside restricting access to only essential staff.
+
+
+*******Services Failure************
+
+
+For a database to be operational it requires the support of essential services which may provided by an outside organization.Failure of services such as power and telecommunications can result in service downtimes and potential loss of data.Failure of power and telecoms can occur as a  failure on the service providers end ; it can also occur as a result of the data centre overstressing the services available is important for a DBA to consider the power and Bandwidth requirements of their system,Power Distribution Units(PDUS)
+and there are a number of software solutions which can monitor bandwidth usage.
+
+
+
+/////////References//////////
+
+[1] http://www.cableorganizer.com/articles/how-to-fireproof-your-server-room.html  accessed on 15/10/13
+
+[2]http://research.microsoft.com/en-us/um/people/navendu/papers/sigcomm11netwiser.pdf
+
+[3]database systems
+   Models, Langauges,Design and Application programming
+   6th edition 
+   Elmarsi & Navthe
+
+   chapter 16 
+
+[4]http://arstechnica.com/information-technology/2012/10/hurricane-sandy-takes-data-centers-offline-with-flooding-power-outages/
+
+[5]http://arstechnica.com/information-technology/2012/11/how-one-nyc-data-center-survived-hurricane-sandy/
+
+[6]http://www.techrepublic.com/article/disaster-recovery-how-to-protect-your-systems-from-flood-threats/
+
+[7]http://www.sans.org/reading-room/whitepapers/awareness/data-center-physical-security-checklist-416?show=data-center-physical-security-checklist-416&cat=awareness
+
+[8] http://www.computerworlduk.com/news/mobile-wireless/3262920/vodafone-in-network-outage-following-datacentre-break-in/
+
+[9]http://www.datacenterknowledge.com/archives/2008/05/30/failure-rates-in-google-data-centers/
+
+
+
+
+
