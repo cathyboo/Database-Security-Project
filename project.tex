@@ -148,6 +148,13 @@ The most straightforward way to protect a database against human error is to con
 Another way to protect the database is to make sure all code is checked and tested before it goes live. A single bug could be enough to take down an entire system, so proper testing is needed to ensure there is no problems that could compromise the integrity of the database.
 
 \subsection{Malicious Risks}
+\subsubsection{Protecting information}
+
+While ideally the information in a database should never be compromised, sometimes there is no amount of preparation that can stop it. Even the biggest companies with high-end security can be breached, such as with Sony and the Playstation Network.\cite{sony} In cases like these, it is imporant that all sensitive data be encrypted in some way.
+
+Passwords and other information can be encrypted using a hashing algorithm. This takes a block of data and returns a fixed-length string called the hash-value. Even a single character changing in the data block will return a completely different hash value. As such, it is possible to store this hash value instead of the actual password, so even if a database is compromised, all the attackers get is a list of encrypted passwords.
+
+It is however possible to reverse engineer the passwords from the hashed values if the hashing algorithm is known. This can be done using a dictionary attack, or something similar. To prevent this, passwords can also be salted before they are hashed, by inserting random characters into the password.\cite{salt}
 
 \begin{thebibliography}{}
 
@@ -201,6 +208,9 @@ Another way to protect the database is to make sure all code is checked and test
 
 \bibitem{raid} Donald, L. (2003). MCSA/MCSE 2006 JumpStart Computer and Network Basics (2nd ed.). Glasgow: SYBEX.
 \bibitem{cloud} Winkler, Vic. "Cloud Computing: Virtual Cloud Security Concerns". Technet Magazine, Microsoft. Retrieved 12 February 2012.
+
+\bibitem{sony} http://www.cbc.ca/news/technology/playstation-data-breach-deemed-in-top-5-ever-1.1059548
+\bibitem{salt} http://www.dshield.org/diary.html?storyid=11110
 
 \end{thebibliography}
 \end{document}
