@@ -4,12 +4,16 @@
 \usepackage{geometry}
 \geometry{a4paper} 
 \usepackage{graphicx}
+\usepackage{anysize}        % allows you to set margins to any size
 
 \title{Database Security}
 \author{Catherine Boothman, Oisin De Conduin, Eoin Gillen, \\
-Sean Nolan, John Cahill, Martin Mac}
+Sean Nolan, John Cahill, Mairtin Mac Colgain}
 
 \begin{document}
+
+\marginsize{25mm}{25mm}{25mm}{25mm}     % sets the sizes of the margins in the order of {l}{r}{t}{b}
+
 \maketitle
 
 \section{Abstract}
@@ -26,54 +30,99 @@ Therefore in order for a database to be considered secure the following requirem
 \section{Risks}
 
 \subsection{Physical Risks}
-Along side malicious attacks physical attacks provide a threat to databases and datacentres.Unlike Malicious attacks , which are carried out intentionally physical threats can originate from a number of non human sources such as Weather, Hardware failure and infrastructure failure. The risk of human related elements is still present ranging from the accidental to the malicious.While these threats cannot be removed outright it is possible to mitigate them; and in the event of there occurence reduce their impact on Data loss and system downtime.	 
+Along side malicious attacks physical attacks provide a threat to databases and datacentres. Unlike Malicious attacks, which are carried out intentionally physical threats can originate from a number of non human sources such as weather, hardware failure and infrastructure failure. The risk of human related elements is still present ranging from the accidental to the malicious.  While these threats cannot be removed outright it is possible to mitigate them; and in the event of there occurence reduce their impact on Data loss and system downtime.	 
 
 
-Environmental threats to databases covers a number of hazards  including fire  and natural disasters such as flooding ,earthquakes and Forest fires.These threats present a risk to a data centers hardware, The structural integrity of the building they are housed in and while an indirect threat access to services such as power, telecoms and environmental controls.
+Environmental threats to databases covers a number of hazards including fire  and natural disasters such as flooding, earthquakes and forest fires.  These threats present a risk to a data centers hardware.  The structural integrity of the building they are housed in and while an indirect threat access to services such as power, telecoms and environmental controls.
 
 \subsubsection{Fire}
 A fire in a data centre is a catastrophic event; resulting in damage to critical equipment and data loss as well as service downtime as repairs are carried out.
 
-A Fire can spread quickly through a data centre; causing damage to equipment and endangering personell. Given the risk associated with a fire, any attempts to tackle a large fire will be carried out by emergency services.This small window is enough time for a fire to cause massive damage to a data centers 
-equipment and to potentially destroy any on site backups.
+A Fire can spread quickly through a data centre; causing damage to equipment and endangering personell. Given the risk associated with a fire, any attempts to tackle a large fire will be carried out by emergency services.  This small window is enough time for a fire to cause massive damage to a data centers equipment and to potentially destroy any on site backups.
 
-Fires can be caused by a number of sources but by far the most common is faulty equipment or power cables[1].It is important to ensure sources of ignition or potentionial fuel is kept away from any critical equipment. 
+Fires can be caused by a number of sources but by far the most common is faulty equipment or power cables \cite{sean1}.  It is important to ensure sources of ignition or potentionial fuel is kept away from any critical equipment. 
 
 \subsubsection{Flooding}
-Flooding is an uncontrollable threat to data centres;A flood can cause damage to critical database equipment,services and even in extreme cases structural damage to the building itself. the damage caused can be mitigated through  proper planning and preventative measures. Preventative measures to protect against flooding primarily consist of backing up data offsite and access to services.The key aims involved in preventative measures are to protect critcal data/equipment and to reduce the downtime experienced by clients to a minimum.In the event of a flood any physical medium such as tapes or hard drives may not be accessible depending on the severity of the flood; it is crucial that copies exist outside of the floodzone for easy recovery.This will allow for a faster recovery and until services are fully restored will allow the clients to make alternative arrangments to reduce downtime to their business.
+Flooding is an uncontrollable threat to data centres; A flood can cause damage to critical database equipment, services and even in extreme cases structural damage to the building itself. The damage caused can be mitigated through proper planning and preventative measures. Preventative measures to protect against flooding primarily consist of backing up data offsite and access to services.  The key aims involved in preventative measures are to protect critcal data/equipment and to reduce the downtime experienced by clients to a minimum.  In the event of a flood any physical medium such as tapes or hard drives may not be accessible depending on the severity of the flood; it is crucial that copies exist outside of the floodzone for easy recovery. This will allow for a faster recovery and until services are fully restored will allow the clients to make alternative arrangments to reduce downtime to their business.
 
-While flooding may not nessecarily damage the datacentre itself it can damage the infrastructure in the surrounding area, as such it is important to keep access to power and telecoms as long as possible. Data centre will keep a series of backup Generator and a reserve of fuel to allow them to function independent from the local power grid.While this reserve will not be sufficient to run the centre for an extended period of time it will provide a window in which steps can be taken to ensure all critical data can be backed up and saved.
+While flooding may not nessecarily damage the datacentre itself it can damage the infrastructure in the surrounding area, as such it is important to keep access to power and telecoms as long as possible.  Data centre will keep a series of backup generators and a reserve of fuel to allow them to function independent from the local power grid.  While this reserve will not be sufficient to run the centre for an extended period of time it will provide a window in which steps can be taken to ensure all critical data can be backed up and saved.
 
-The second stage of flood measures is to protect any critical equipment such as server racks and UPS's from damage.It is important to ensure that as much equipment as possible remains above the water; depending on the equipments location in the building this may not be possible. Equipment can be covered in plastic tarp to help reduce water damage but this is by no means a fool proof solution, after flood waters have receded recovery of the data centre can begin. The first step is to salvage as much equipment as possible and replace any damaged equipment; after the physical system is restored data can then be reloaded onto the systems from the offsite backups.
+The second stage of flood measures is to protect any critical equipment such as server racks and UPS's from damage.  It is important to ensure that as much equipment as possible remains above the water; depending on the equipments location in the building this may not be possible.  Equipment can be covered in plastic tarp to help reduce water damage but this is by no means a fool proof solution, after flood waters have receded recovery of the data centre can begin. The first step is to salvage as much equipment as possible and replace any damaged equipment; after the physical system is restored data can then be reloaded onto the systems from the offsite backups.
 
-A recent example of datacentres which where damaged during flooding occured during hurrucane Sandy. Data Centres were cut off from services and in some cases had to run as long as twelve days on reserve fuel before services were restored[4].
+A recent example of datacentres which where damaged during flooding occured during hurrucane Sandy. Data Centres were cut off from services and in some cases had to run as long as twelve days on reserve fuel before services were restored \cite{sean4}.
 
 
 
 \subsubsection{Hardware Failure}
-Given that most databases will run on a continous basis Hardware failure is an expected consequences of operating a data center.There are a number of hardware copmonents which can fail in a database including Memory,CPU's motherboards and power supplys[9].However the most common component failure comes from hard drives.
+Given that most databases will run on a continous basis Hardware failure is an expected consequences of operating a data center.There are a number of hardware copmonents which can fail in a database including Memory,CPU's motherboards and power supplys \cite{sean9}.  However the most common component failure comes from hard drives.
 
-Mechanincal storage is the most cost effective method for storing large volumes of data on a non volatile medium[2]. Due to the drives structure and moving parts, they are more prone to suffer failures than other alternatives such as  solid state drives.
+Mechanincal storage is the most cost effective method for storing large volumes of data on a non volatile medium \cite{sean2}. Due to the drives structure and moving parts, they are more prone to suffer failures than other alternatives such as  solid state drives.
 
-Given the possibility of failure associated with hardware it is paramount that a database be backed up routinely.Hard drive integrity can be increased using techniques such as RAID arrays, which will allow data to be rebuilt from a cluster of Hard drives should one fail.Other hardware should be swapped out as soon as the failure arises to ensure a minimum of downtime for the database. A proactive maintaince schedule will help to reduce the impact of hardware failure on the database.
+Given the possibility of failure associated with hardware it is paramount that a database be backed up routinely.  Hard drive integrity can be increased using techniques such as RAID arrays, which will allow data to be rebuilt from a cluster of Hard drives should one fail.  Other hardware should be swapped out as soon as the failure arises to ensure a minimum of downtime for the database. A proactive maintaince schedule will help to reduce the impact of hardware failure on the database.
 
 \subsubsection{Human Element}
-While the security risks dicsussed above primarily deal with elements outside of control there are physical risks to a data center /data base which can come from a human element, these can range from the unitentional to the malicious.
+While the security risks dicsussed above primarily deal with elements outside of control there are physical risks to a data center / data base which can come from a human element, these can range from the unitentional to the malicious.
 
 Encryption of data will make it  difficult to glean any sensitive information from stolen hard drives;data bases and larger Data Centres can contain a myriad of high value equipment.This equipment can range from complex networking equipment such as servers and network switches to fibre cable and tools.
 
-Equipment can also be damaged during a break-in ; one such break-in occured in vodafones Basingstoke data center in the United Kingdom[8].Thieves caused damage to a number of servers resulting a service outage to Vodafones voice SMS and internet services.
+Equipment can also be damaged during a break-in ; one such break-in occured in vodafones Basingstoke data center in the United Kingdom \cite{sean8}.  Thieves caused damage to a number of servers resulting a service outage to Vodafones voice SMS and internet services.
 
 It is important to ensure an adequate security system is in place alongside restricting access to only essential staff.
 
 
 \subsubsection{Services Failure}
-For a database to be operational it requires the support of essential services which may provided by an outside organization.Failure of services such as power and telecommunications can result in service downtimes and potential loss of data.Failure of power and telecoms can occur as a  failure on the service providers end ; it can also occur as a result of the data centre overstressing the services available is important for a DBA to consider the power and Bandwidth requirements of their system,Power Distribution Units(PDUS)
-and there are a number of software solutions which can monitor bandwidth usage.
+For a database to be operational it requires the support of essential services which may provided by an outside organization.  Failure of services such as power and telecommunications can result in service downtimes and potential loss of data.  Failure of power and telecoms can occur as a failure on the service providers end; it can also occur as a result of the data centre overstressing the services available is important for a DBA to consider the power and Bandwidth requirements of their system, Power Distribution Units(PDUS) and there are a number of software solutions which can monitor bandwidth usage.
 
 
 \subsection{Human Error}
-\subsection{Malicious Risks}
+One of the biggest threats to computer network security is from authorised users who do not follow proper safety protocol because of a lack of education or carelessness.  Errors by users include;
+
+\begin{itemize}
+\item Leaving a computer logged in while unattended, for example: if going out for lunch a user does not lock computer.
+\item Weak password - Use of common or simple password making it easy for hackers to guess.
+\item Visiting illegitimate websites or downloading malicious attachments.
+\item Illegitimate disclosure of information, such as a password, to unauthorised personnel.
+\end{itemize}
+
+Email is one of the most common means of virus spread.  Social engineering is used to convince users to open an email and possibly even an extra attachment.  Malicious code can be in HTML form or any type of code can be used in the attachment.
+
+Phishing is another form of email attack that uses social engineering to convince users to hand sensitive information over to a cracker, which they can then use to attack networks and databases.
+
+Instant messages and social networks, like Twitter, are a relatively new route for malicious attacks.  Crackers will again use social engineering to convince users to click on illegitimate links or download malicious software, opening up a network or database to harm \cite{Bas}.
+
+\subsection{Malware Attack}
+
+Although Databases can be configured to only allow local access, increasingly they are placed on the cloud or a specific server, with access allowed through the internet or across a network.  This openness creates possible security threats from malicious planned computer attacks over the network.  Furthermore, increasingly important business, financial and personal information is uploaded into Databases, making them enticing and profitable targets for intruders.
+
+There are over 600,000 malware programs at large on the internet.  Malware is a term for malicious software that is designed by intruders to carry out unauthorized activity on a computer or network, these can often be damaging of destructive to a database.
+
+Malware comes in the following forms;
+
+\subsubsection{Viruses}
+Viruses are self replicating pieces of software that install themselves on a computer without user consent.  Once installed, they can often carry out harmful attacks, such as stealing memory or CPU activity. They can be very dangerous if they are designed to steal or harm databases.  They can access private information, log keystrokes, corrupt/manipulate data, along with numerous other harmful acts.
+
+Crackers can be very smart about designing viruses to exploit specific security vulnerabilities or use social engineering to fool users into downloading malicious packages.  There are many different types of virus, such as File-infected viruses and Multipartite viruses \cite{Bas}.
+
+\subsubsection{Trojans}
+
+Trojans are malicious programs that disguise themselves as legitimate programs.  Unlike viruses they do not replicate.  They are used to gain access or cause harm to a computer or network.  There are numerous different types of Trojan \cite{Bas}.
+
+\subsubsection{Worms}
+Worms can be seen as a specialist version of virus, with the major added danger that they do not need user input to travel from one computer to another.  They are programmed to automatically exploit networks(internet or LAN) and travel from linked device to linked device. Worms are self-learning and will use information on vulnerabilities they found on one computer to infect the next computer on a network.  A worm will repeat the pattern of infecting, learning and spreading until it has potentially destroyed a whole network \cite{Bas}.
+
+\subsubsection{Spyware}
+Spyware is a type of virus that monitors your computer use to steal your information without your knowledge.  The information is sent back to the Spyware creator to use as they wish \cite{Bas}.
+
+\subsubsection{Adware}
+Adware is like spyware as it can gather information on a user without consent, but it can also be used to display targeted ads to a user, often through the form of pop-up web pages \cite{Bas}.
+
+\subsubsection{Bots}
+Bots are malicious programs that install themselves on your computer with the intent of controlling it.  Bots can carry out a wide array of functions.  Bots are controlled by a cracker who may be able to control thousands of computers by infecting them all with Bots.  Together these infected and controlled computers are now called a Botnet.
+
+Bots can be used for a Denial of Service (DOS) attack, where they flood a CPU with requests, slowing it down till it becomes unusable, or else doing the same to a network or database, to shut it down.  They can also be used by their creator to carry out illegal acts like DOS or phishing attacks on other targets.  Bots are difficult to find and hard to remove, often needing the whole OS to be reinstalled so a user can be sure their computer is Bot free \cite{Bas}.
+
+\subsubsection{SQL Injection}
+SQL injection is a particular danger to databases and other data driven systems.  It involves malicious SQL statements being inserted into the entry field of a database and then executed.  Hijacking website URLs and sending information through a web-browser is a common attack "vector".  SQL injections can be used to reveal confidential database information to an attacker, or carry out unauthorised manipulation of a database, causing harm to a database \cite{Bas}.
 
 \section{Security Measures}
 \subsection{Physical Risks}
@@ -95,6 +144,40 @@ and there are a number of software solutions which can monitor bandwidth usage.
 \bibitem{Shul}  Amichai Shulman, {\it Top Ten Database Security Threats: How to Mitigate the Most Significant Database Vulnerabilities}, Imperva Website
 
 \bibitem{Ora}  Sumit Jeloka, Don Gosselin and Richard Smith, {\it Oracle\textregistered Database Security Guide, Release 2}, Oracle and/or its affiliates (2012)
+
+% [1] http://www.cableorganizer.com/articles/how-to-fireproof-your-server-room.html  accessed on 15/10/13
+\bibitem{sean1}  http://www.cableorganizer.com/articles/how-to-fireproof-your-server-room.html
+
+% [2]http://research.microsoft.com/en-us/um/people/navendu/papers/sigcomm11netwiser.pdf
+\bibitem{sean2}  http://research.microsoft.com/en-us/um/people/navendu/papers/sigcomm11netwiser.pdf
+
+% [3]database systems
+%   Models, Langauges,Design and Application programming
+%   6th edition 
+%   Elmarsi & Navthe
+%  chapter 16 
+
+% [4] http://arstechnica.com/information-technology/2012/10/hurricane-sandy-takes-data-centers-offline-with-flooding-power-outages/
+\bibitem{sean4}  http://arstechnica.com/information-technology/2012/10/hurricane-sandy-takes-data-centers-offline-with-flooding-power-outages/
+
+% [5] http://arstechnica.com/information-technology/2012/11/how-one-nyc-data-center-survived-hurricane-sandy/
+\bibitem{sean5}  http://arstechnica.com/information-technology/2012/11/how-one-nyc-data-center-survived-hurricane-sandy/
+
+% [6] http://www.techrepublic.com/article/disaster-recovery-how-to-protect-your-systems-from-flood-threats/
+\bibitem{sean6}  http://www.techrepublic.com/article/disaster-recovery-how-to-protect-your-systems-from-flood-threats/
+
+% [7] http://www.sans.org/reading-room/whitepapers/awareness/data-center-physical-security-checklist-416?show=data-center-physical-security-checklist-416&cat=awareness
+\bibitem{sean7}  http://www.sans.org/reading-room/whitepapers/awareness/data-center-physical-security-checklist-416?show=data-center-physical-security-checklist-416\&cat=awareness
+
+% [8] http://www.computerworlduk.com/news/mobile-wireless/3262920/vodafone-in-network-outage-following-datacentre-break-in/
+\bibitem{sean8}  http://www.computerworlduk.com/news/mobile-wireless/3262920/vodafone-in-network-outage-following-datacentre-break-in/
+
+% [9] http://www.datacenterknowledge.com/archives/2008/05/30/failure-rates-in-google-data-centers/
+\bibitem{sean9}  http://www.datacenterknowledge.com/archives/2008/05/30/failure-rates-in-google-data-centers/
+
+  
+
+\bibitem{Bas}  Alfred Basta and Melissa Zgola, {\it Database Security}, Delmar Cengage Learning (2011)
 
 \end{thebibliography}
 \end{document}
