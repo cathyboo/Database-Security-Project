@@ -126,7 +126,27 @@ SQL injection is a particular danger to databases and other data driven systems.
 
 \section{Security Measures}
 \subsection{Physical Risks}
+
+\subsubsection{RAID}
+
+One of the easiest and most common ways to protect a database against hard-drive failure is to use RAID (redundant array of independent disks)\cite{raid} This is an umbrella term used to describe data storage schemes that divide and replicate data across multiple hard drives in real time. This allows a server to use mutliple hard drives at once, increasing performance and allowing for easy data recovery in case of hard drive failure.
+
+\subsubsection{Off-site backups}
+
+However in the even of a flood/fire or other disaster, an entire server could be destroyed. On of the many ways to secure a backup of a database system against these possible physical risks is to keep a secure off-site backup away from the main site. This way, even if the site of the main server is compromised, it is possible to recover the data from the off-site backup.
+
+\subsubsection{Cloud storage}
+
+Storing a backup in the cloud allows for recovery, similar to storage on an off-site location. Keeping sensitive data in the cloud may not be as secure as keeping it in a separate off-site location\cite{cloud}, though it may be more convenient.
+
 \subsection{Human Error}
+\subsubsection{Access control}
+The most straightforward way to protect a database against human error is to control access to the database tightly. Make sure that people only have access to the areas of the database that they need, and nothing more. 
+
+\subsubsection{Testing}
+
+Another way to protect the database is to make sure all code is checked and tested before it goes live. A single bug could be enough to take down an entire system, so proper testing is needed to ensure there is no problems that could compromise the integrity of the database.
+
 \subsection{Malicious Risks}
 
 \begin{thebibliography}{}
@@ -178,6 +198,9 @@ SQL injection is a particular danger to databases and other data driven systems.
   
 
 \bibitem{Bas}  Alfred Basta and Melissa Zgola, {\it Database Security}, Delmar Cengage Learning (2011)
+
+\bibitem{raid} Donald, L. (2003). MCSA/MCSE 2006 JumpStart Computer and Network Basics (2nd ed.). Glasgow: SYBEX.
+\bibitem{cloud} Winkler, Vic. "Cloud Computing: Virtual Cloud Security Concerns". Technet Magazine, Microsoft. Retrieved 12 February 2012.
 
 \end{thebibliography}
 \end{document}
