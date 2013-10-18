@@ -2,20 +2,16 @@ Threats to DB's
 
 	##Malicious Threats
 
-	Human Error
+	Human Error (Authentication Violations, Nonrepudiation)
 	
 	Malware Attack;
-		Viruses
-		Trojans
-		Worms
-		Spyware
-		Adware
-		Bots
+		Viruses/Trojans/Worms/Spyware/Bots
 		SQL Injection
+		DDOS
 
 **Human Error
 
-One of the biggest threats to computer network security is from authorised users who do not follow proper safety protocol because of a lack of education or carelessness.  Errors by users include;
+One of the biggest threats to database security is from authorised users who do not follow proper safety protocol because of a lack of education or carelessness; this can lead to 'Authentication Errors'.  Errors by users include;
 
 *Leaving a computer logged in while unattended, for example: if going out for lunch a user does not lock computer.
 
@@ -25,11 +21,9 @@ One of the biggest threats to computer network security is from authorised users
 
 *Illegitimate disclosure of information, such as a password, to unauthorised personnel.
 
-Email is one of the most common means of virus spread.  Social engineering is used to convince users to open an email and possibly even an extra attachment.  Malicious code can be in HTML form or any type of code can be used in the attachment.
+Email, instant messaging and Social Networks are the most common means of virus spread.  Social engineering is used to convince users to open an email, click on a link or possibly even download an attachment, opening up a database to harm.  Phishing is a form of email attack that uses social engineering to convince users to hand sensitive information over to a cracker, such as a password, which they can then use to attack databases. 
 
-Phishing is another form of email attack that uses social engineering to convince users to hand sensitive information over to a cracker, which they can then use to attack networks and databases.
-
-Instant messages and social networks, like Twitter, are a relatively new route for malicious attacks.  Crackers will again use social engineering to convince users to click on illegitimate links or download malicious software, opening up a network or database to harm.
+Nonrepudiation methods should be used to track users’ access and manipulation of a database, so if there is an error or attack it will be able to be traced back to a particular user account.
 
 
 **Malware Attack;
@@ -40,37 +34,20 @@ There are over 600,000 malware programs at large on the internet.  Malware is a 
 
 Malware comes in the following forms;
 
-*Viruses
+*Viruses/Trojans/Worms/Spyware/Bots
 
-Viruses are self replicating pieces of software that install themselves on a computer without user consent.  Once installed, they can often carry out harmful attacks, such as stealing memory or CPU activity. They can be very dangerous if they are designed to steal or harm databases.  They can access private information, log keystrokes, corrupt/manipulate data, along with numerous other harmful acts.
+Viruses are self-replicating pieces of software that install themselves on a computer without user consent.  Once installed, they can often carry out harmful attacks on databases.  They can access private information, log keystrokes, corrupt/manipulate data, along with numerous other harmful acts.
 
-Crackers can be very smart about designing viruses to exploit specific security vulnerabilities or use social engineering to fool users into downloading malicious packages.  There are many different types of virus, such as File-infected viruses and Multipartite viruses.
+Trojans are malicious programs that disguise themselves as legitimate programs.  Unlike viruses they do not replicate.  They can be used to harm/manipulate databases or carry out other remote attacks.
 
-*Trojans
+Worms can be seen as a specialist version of virus, with the major added danger that they do not need user input to travel through a computer network. Worms are self-learning and will use information on vulnerabilities they found on one computer to infect the next computer on a network, potentially harming databases if programmed to do so.
 
-Trojans are malicious programs that disguise themselves as legitimate programs.  Unlike viruses they do not replicate.  They are used to gain access or cause harm to a computer or network.  There are numerous different types of Trojan.
+Spyware is a type of virus that monitors your computer/database to steal your information without your knowledge.  The information is sent back to the Spyware creator to use as they wish.
 
-*Worms
-
-Worms can be seen as a specialist version of virus, with the major added danger that they do not need user input to travel from one computer to another.  They are programmed to automatically exploit networks(internet or LAN) and travel from linked device to linked device. Worms are self-learning and will use information on vulnerabilities they found on one computer to infect the next computer on a network.  A worm will repeat the pattern of infecting, learning and spreading until it has potentially destroyed a whole network.
-
-*Spyware
-
-Spyware is a type of virus that monitors your computer use to steal your information without your knowledge.  The information is sent back to the Spyware creator to use as they wish.
-
-*Adware
-
-Adware is like spyware as it can gather information on a user without consent, but it can also be used to display targeted ads to a user, often through the form of pop-up web pages.
-
-*Bots
-
-Bots are malicious programs that install themselves on your computer with the intent of controlling it.  Bots can carry out a wide array of functions.  Bots are controlled by a cracker who may be able to control thousands of computers by infecting them all with Bots.  Together these infected and controlled computers are now called a Botnet.
-
-Bots can be used for a Denial of Service (DOS) attack, where they flood a CPU with requests, slowing it down till it becomes unusable, or else doing the same to a network or database, to shut it down.  They can also be used by their creator to carry out illegal acts like DOS or phishing attacks on other targets.  Bots are difficult to find and hard to remove, often needing the whole OS to be reinstalled so a user can be sure their computer is Bot free.
+Bots are malicious programs that install themselves on your computer with the intent of controlling it.  Bots are controlled by a cracker who may be able to control thousands of computers by infecting them all with Bots.  Bots can be used for a Denial of Service (DOS) attack, where they flood a CPU with requests, slowing it down till it becomes unusable, or else doing the same to a network or database, to shut it down. 
 
 *SQL Injection
 
 SQL injection is a particular danger to databases and other data driven systems.  It involves malicious SQL statements being inserted into the entry field of a database and then executed.  Hijacking website URLs and sending information through a web-browser is a common attack "vector".  SQL injections can be used to reveal confidential database information to an attacker, or carry out unauthorised manipulation of a database, causing harm to a database.
-
 
 Reference for all this part; Database Security, Basta (Author), Publisher: Delmar Cengage Learning (26 July 2011)
