@@ -6,6 +6,9 @@
 \usepackage{graphicx}
 \usepackage{anysize}        % allows you to set margins to any size
 \usepackage{balance}
+% \usepackage{hyperref}
+% \usepackage[vertfit]{breakurl}
+\usepackage[hyphens]{url}
 
 \title{Database Security}
 \author{Catherine Boothman, Oisin De Conduin, Eoin Gillen, \\
@@ -33,19 +36,15 @@ Security threats can be roughly categorised into the following three areas; 1) u
 
 Therefore in order for a database to be considered secure the following requirements must be met.  1) Data privacy protection data against unauthorized disclosure, sometimes referred to as secrecy or confidentiality.  2) Data integrity refers to the prevention of unauthorized and improper data modification.  3) Data availability refers to the prevention and recovery from hardware and software errors or physical damage and from malicious data access denials making the database system unavailable. These three requirements arise in practically all application environments \cite{BerSand}\&\cite{Thur} and will be dealt with in more detail later in this paper.
 
-
-
 \section{Threats To Database Security}
-
-
 \subsection{Human Error}
-One of the biggest threats to database security is from authorised users who do not follow proper safety protocol because of a lack of education or carelessness; this can lead to 'Authentication Errors'\cite{Thur}.  Errors by users include;
+One of the biggest threats to database security is from authorised users who do not follow proper safety protocol because of a lack of education or carelessness; this can lead to 'Authentication Errors' \cite{Thur}.  Errors by users include;
 
 \begin{itemize}
 \item Leaving a computer logged in while unattended, for example: if going out for lunch a user does not lock computer.
 \item Weak password - Use of common or simple password making it easy for hackers to guess.
 \item Visiting illegitimate websites or downloading malicious attachments.
-\item Illegitimate disclosure of information, such as a password, to unauthorised personnel\cite{Bas}.
+\item Illegitimate disclosure of information, such as a password, to unauthorised personnel \cite{Bas}.
 \end{itemize}
 
 Email, instant messaging and Social Networks are the most common means of virus spread.  Social engineering is used to convince users to open an email, click on a link or possibly even download an attachment, opening up a database to harm.  Phishing is a form of email attack that uses social engineering to convince users to hand sensitive information over to a cracker, such as a password, which they can then use to attack databases\cite{Bas}.
@@ -53,7 +52,6 @@ Email, instant messaging and Social Networks are the most common means of virus 
 Nonrepudiation methods should be used to track users’ access and manipulation of a database, so if there is an error or attack it will be able to be traced back to a particular user account \cite{Thur}.
 
 \subsection{Malware Attack}
-
 Although Databases can be configured to only allow local access, increasingly they are placed on the cloud or a specific server, with access allowed through the internet or across a network.  This openness creates possible security threats from malicious planned computer attacks over the network.  Furthermore, increasingly important business, financial and personal information is uploaded into Databases, making them enticing and profitable targets for intruders \cite{Bas}.
 
 There are over 600,000 malware programs at large on the internet.  Malware is a term for malicious software that is designed by intruders to carry out unauthorized activity on a computer or network, these can often be damaging of destructive to a database\cite{Bas}.
@@ -62,7 +60,6 @@ Malware comes in the following forms;
 
 \subsubsection{Viruses/Trojans/Worms/Spyware/Bots}
 Viruses are self-replicating pieces of software that install themselves on a computer without user consent.  Once installed, they can often carry out harmful attacks on databases.  They can access private information, log keystrokes, corrupt/manipulate data, along with numerous other harmful acts \cite{Bas}.
-<<<<<<< HEAD
 
 Trojans are malicious programs that disguise themselves as legitimate programs.  Unlike viruses they do not replicate.  They can be used to harm/manipulate databases or carry out other remote attacks\cite{Bas}.
 
@@ -77,7 +74,6 @@ SQL injection is a particular danger to databases and other data driven systems.
 
 
 \subsection{Natural Disasters}
-
 Natural Disasters present an uncontrollable threat to the data centers and databases, such incidents include earthquakes, flooding, Hurricanes and fire.The threat presented is twofold there is an immediate threat to any equipment and data present there is also the threat of service downtime. if the databases is critical to a number of onsite or even offsite services any downtime can result in a loss of revenue and customer confidence.
 
 When preventing to attempt damage to data base systems response time is crucial. a fire , for example  can spread quickly through a data centre; causing damage to equipment and endangering personnel. Given the risk associated with a fire, any attempts to tackle a large fire will be carried out by emergency services.This small window is enough time for a fire to cause massive damage to a data centers equipment and to potentially destroy any on site backups.
@@ -88,66 +84,69 @@ A recent example of data systems caught in the area of a natural disaster can be
 
 
 \subsection{Hardware Failure}
-
 Given that most databases will run on a continous basis Hardware failure is an expected consequences of operating a data center.There are a number of hardware copmonents which can fail in a database including Memory,CPU's motherboards and power supplies\cite{sean9}.However the most common component failure comes from hard drives.
 
 Mechanical storage is the most cost effective method for storing large volumes of data on a non volatile medium\cite{sean2}. Due to the drives structure and moving parts, they are prone to failure as they age.
 
- 
-
-
 \subsection{Human element}
-
 While the security risks dicsussed above primarily deal with elements outside of control there are physical risks to a data center /data base which can come from a human element, these can range from the unitentional to the malicious.
 
 Encryption of data will make it  difficult to glean any sensitive information from stolen hard drives;data bases and larger Data Centres can contain a myriad of high value equipment.This equipment can range from complex networking equipment such as servers and network switches to fibre cable and tools.
 
-Equipment can also be damaged during a break-in ; one such break-in occurred in Vodafone’s Basingstoke data center in the United Kingdom\cite{sean8}.Thieves caused damage to a number of servers resulting a service outage to Vodafone's voice SMS and internet services.
+Equipment can also be damaged during a break-in ; one such break-in occurred in Vodafone’s Basingstoke data center in the United Kingdom \cite{sean8}. Thieves caused damage to a number of servers resulting a service outage to Vodafone's voice SMS and internet services.
 
-it is also possible for elements within an organization to present a threat to a database. Sabotage of a database or falsification of the data stored on it by  employees for malicious purposes disruption of services and a loss of data integrity. These acts can be carried out for the purposes of committing fraud or can be purely destructive.It is important to ensure an adequate security system is in place alongside restricting access to only essential staff.
-=======
+It is also possible for elements within an organization to present a threat to a database. Sabotage of a database or falsification of the data stored on it by  employees for malicious purposes disruption of services and a loss of data integrity. These acts can be carried out for the purposes of committing fraud or can be purely destructive.It is important to ensure an adequate security system is in place alongside restricting access to only essential staff.
 
-Trojans are malicious programs that disguise themselves as legitimate programs.  Unlike viruses they do not replicate.  They can be used to harm/manipulate databases or carry out other remote attacks\cite{Bas}.
+Trojans are malicious programs that disguise themselves as legitimate programs.  Unlike viruses they do not replicate.  They can be used to harm/manipulate databases or carry out other remote attacks \cite{Bas}.
 
-Worms can be seen as a specialist version of virus, with the major added danger that they do not need user input to travel through a computer network. Worms are self-learning and will use information on vulnerabilities they found on one computer to infect the next computer on a network, potentially harming databases if programmed to do so\cite{Bas}.
+Worms can be seen as a specialist version of virus, with the major added danger that they do not need user input to travel through a computer network. Worms are self-learning and will use information on vulnerabilities they found on one computer to infect the next computer on a network, potentially harming databases if programmed to do so \cite{Bas}.
 
-Spyware is a type of virus that monitors your computer/database to steal your information without your knowledge.  The information is sent back to the Spyware creator to use as they wish\cite{Bas}.
+Spyware is a type of virus that monitors your computer/database to steal your information without your knowledge.  The information is sent back to the Spyware creator to use as they wish \cite{Bas}.
 
-Bots are malicious programs that install themselves on your computer with the intent of controlling it.  Bots are controlled by a cracker who may be able to control thousands of computers by infecting them all with Bots.  Bots can be used for a Denial of Service (DOS) attack, where they flood a CPU with requests, slowing it down till it becomes unusable, or else doing the same to a network or database, to shut it down\cite{Bas}. 
->>>>>>> 2787c4e4c561b7e0f84c3702f75b4929227550de
+Bots are malicious programs that install themselves on your computer with the intent of controlling it.  Bots are controlled by a cracker who may be able to control thousands of computers by infecting them all with Bots.  Bots can be used for a Denial of Service (DOS) attack, where they flood a CPU with requests, slowing it down till it becomes unusable, or else doing the same to a network or database, to shut it down \cite{Bas}. 
 
 
 \section{Security Measures}
+
 \subsection{Physical Risks}
-
 \subsubsection{RAID}
-
-One of the easiest and most common ways to protect a database against hard-drive failure is to use RAID (redundant array of independent disks)\cite{raid} This is an umbrella term used to describe data storage schemes that divide and replicate data across multiple hard drives in real time. This allows a server to use mutliple hard drives at once, increasing performance and allowing for easy data recovery in case of hard drive failure.
+One of the easiest and most common ways to protect a database against hard-drive failure is to use RAID (redundant array of independent disks) \cite{raid} This is an umbrella term used to describe data storage schemes that divide and replicate data across multiple hard drives in real time. This allows a server to use mutliple hard drives at once, increasing performance and allowing for easy data recovery in case of hard drive failure.
 
 \subsubsection{Off-site backups}
-
 However in the even of a flood/fire or other disaster, an entire server could be destroyed. On of the many ways to secure a backup of a database system against these possible physical risks is to keep a secure off-site backup away from the main site. This way, even if the site of the main server is compromised, it is possible to recover the data from the off-site backup.
 
 \subsubsection{Cloud storage}
-
-Storing a backup in the cloud allows for recovery, similar to storage on an off-site location. Keeping sensitive data in the cloud may not be as secure as keeping it in a separate off-site location\cite{cloud}, though it may be more convenient.
+Storing a backup in the cloud allows for recovery, similar to storage on an off-site location. Keeping sensitive data in the cloud may not be as secure as keeping it in a separate off-site location \cite{cloud}, though it may be more convenient.
 
 \subsection{Human Error}
-\subsubsection{Access control}
-The most straightforward way to protect a database against human error is to control access to the database tightly. Make sure that people only have access to the areas of the database that they need, and nothing more. 
+\subsubsection{Role-Based Access control}
+The most straightforward way to protect a database against human error is to control access to the database tightly.Applying the principle of least privilege, make sure that people only have access to the areas of the database that they need, and nothing more.The challenges include handling multiple roles, conflicting roles and consistency of the access control roles.
 
 \subsubsection{Testing}
+The fault-tolerance computing community has come up with several algorithms for recovering databases and systems from failures and other problems .These techniques included acceptance testing and checkpointing \cite{Thur}. Sometimes data is replicated as aforementioned so that there are backup copies. Therfore it is imperative to make sure that all code is checked and tested before it goes live. A single bug could be enough to take down an entire system, so proper testing is needed to ensure there is no problems that could compromise the integrity of the database.we also need flexible security policies as the requirements such as security and real time processing may be conflicting \cite{Thur}.
 
-Another way to protect the database is to make sure all code is checked and tested before it goes live. A single bug could be enough to take down an entire system, so proper testing is needed to ensure there is no problems that could compromise the integrity of the database.
+\subsubsection{Risk Analysis}
+Before developing any computer system for a particular operation, one needs to study the security risks involved.The goal is to mitigate the risks or at least limit and contain them if the threats cannot be eliminated. The challenges include identifying all the threats that are inherent to a particular situation. This is especially useful for viruses as once a virus starts spreading, the challenge is how do you stop it or if you cannot how do you contain it and limit the damage the that is caused \cite{Thur}? Although various AntiVirus software  packages will possibly limit the virus from affecting the system or causing serious damage new viruses are being developed all of the time and therefore it would be prudent to stay one step ahead.
 
 \subsection{Malicious Risks}
-\subsubsection{Protecting information}
+\subsubsection{Firewalls}
+Various Organisations now have web infrastructure for internal and external use. To access the external infrastructure one has to go through the firewall. These Firewalls examine the information that comes into and out of an organisation. This way the internal assets are protected and inappropriate information may be prevented from coming into an organisation \cite{Thur}. It is also possible to throttle connections through the firwewall to increase security and reduce access to database servers.
 
-While ideally the information in a database should never be compromised, sometimes there is no amount of preparation that can stop it. Even the biggest companies with high-end security can be breached, such as with Sony and the Playstation Network.\cite{sony} In cases like these, it is imporant that all sensitive data be encrypted in some way.
+\subsubsection{Data Mining}
+Data mining is the process of posing queries and extracting patterns, often previously unknown, from large quantities of data using pattern matching or other reasoning techniques. Data mining may be used to detect and possibly prevent cyber-attacks. For example, anomoly detection techniques could be used to detect unusual patterns and behaviours. Link analysis may be used to trace the viruses to the perpretrators. Classification may be used to group various cyber-attacks and then use the profiles to detect an attack when it occurs. Prediction may be used to determine potential future attacks. data mining can aslo be used for analyzing Web logs as well as analyzing the audit trails. Based on the results of the data-mining tool, one can then determine whether any unauthorised queries have been posed \cite{Thur}.  It is important also to note that Data mining gives out information not previously known using various reasoning techniques such as statistical inference which exacerrbates the Inference problem whereby unauthorised information can be deduced from legitimate resonses to queries posed.This needs to be considered and approriate security and privacy constraints applied to all data sources.
+
+\subsubsection{Protecting information}
+While ideally the information in a database should never be compromised, sometimes there is no amount of preparation that can stop it. Even the biggest companies with high-end security can be breached, such as with Sony and the Playstation Network \cite{sony}.  In cases like these, it is imporant that all sensitive data be encrypted in some way.
 
 Passwords and other information can be encrypted using a hashing algorithm. This takes a block of data and returns a fixed-length string called the hash-value. Even a single character changing in the data block will return a completely different hash value. As such, it is possible to store this hash value instead of the actual password, so even if a database is compromised, all the attackers get is a list of encrypted passwords.
+For other types of information, using hash functions on for example a message, a message digest is created. If appropriate functions are used each message will have a unique digest.Therefore even a small modification to the message will result in a completely different message digest. this way integrity is maintained. Message digests together with cryptographic receipts, which are digitally signed, ensure the receiver knows the identity of the sender \cite{Thur}.
 
-It is however possible to reverse engineer the passwords from the hashed values if the hashing algorithm is known. This can be done using a dictionary attack, or something similar. To prevent this, passwords can also be salted before they are hashed, by inserting random characters into the password.\cite{salt}
+It is however possible to reverse engineer the passwords from the hashed values if the hashing algorithm is known. This can be done using a dictionary attack, or something similar. To prevent this, passwords can also be salted before they are hashed, by inserting random characters into the password \cite{salt}.
+
+\subsubsection{Database hardening}
+It is extremely important to keep up to date with patches as indicated by the SQL Slammer Worm which affected circa 100,000 systems in January 2003 exploiting the buffer overflow problem. The worm was made possible by a software security vulnerability in SQL Server first reported by Microsoft on July 24, 2002. A patch had been available from Microsoft for six months prior to the worm's launch, but many installations had not been patched.
+Furthermore stored procedures and triggers can lead to privilege escalation and compromise and this should be considered prior to establishing.Databases
+Finally database processes should be run under dedicated non-privileged accounts through applications and unneeded components of said databases disabled.
 
 \balance
 \begin{thebibliography}{}
@@ -167,10 +166,10 @@ It is however possible to reverse engineer the passwords from the hashed values 
 \bibitem{Ora}  Sumit Jeloka, Don Gosselin and Richard Smith, {\it Oracle\textregistered Database Security Guide, Release 2}, Oracle and/or its affiliates (2012)
 
 % [1] http://www.cableorganizer.com/articles/how-to-fireproof-your-server-room.html  accessed on 15/10/13
-\bibitem{sean1}  http://www.cableorganizer.com/articles/how-to-fireproof-your-server-room.html
+\bibitem{sean1}  \url{http://www.cableorganizer.com/articles/how-to-fireproof-your-server-room.html}
 
 % [2]http://research.microsoft.com/en-us/um/people/navendu/papers/sigcomm11netwiser.pdf
-\bibitem{sean2}  http://research.microsoft.com/en-us/um/people/navendu/papers/sigcomm11netwiser.pdf
+\bibitem{sean2}  \url{http://research.microsoft.com/en-us/um/people/navendu/papers/sigcomm11netwiser.pdf}
 
 % [3]database systems
 %   Models, Langauges,Design and Application programming
@@ -179,30 +178,30 @@ It is however possible to reverse engineer the passwords from the hashed values 
 %  chapter 16 
 
 % [4] http://arstechnica.com/information-technology/2012/10/hurricane-sandy-takes-data-centers-offline-with-flooding-power-outages/
-\bibitem{sean4}  http://arstechnica.com/information-technology/2012/10/hurricane-sandy-takes-data-centers-offline-with-flooding-power-outages/
+\bibitem{sean4}  \url{http://arstechnica.com/information-technology/2012/10/hurricane-sandy-takes-data-centers-offline-with-flooding-power-outages/}
 
 % [5] http://arstechnica.com/information-technology/2012/11/how-one-nyc-data-center-survived-hurricane-sandy/
-\bibitem{sean5}  http://arstechnica.com/information-technology/2012/11/how-one-nyc-data-center-survived-hurricane-sandy/
+\bibitem{sean5}  \url{http://arstechnica.com/information-technology/2012/11/how-one-nyc-data-center-survived-hurricane-sandy/}
 
 % [6] http://www.techrepublic.com/article/disaster-recovery-how-to-protect-your-systems-from-flood-threats/
-\bibitem{sean6}  http://www.techrepublic.com/article/disaster-recovery-how-to-protect-your-systems-from-flood-threats/
+\bibitem{sean6}  \url{http://www.techrepublic.com/article/disaster-recovery-how-to-protect-your-systems-from-flood-threats/}
 
 % [7] http://www.sans.org/reading-room/whitepapers/awareness/data-center-physical-security-checklist-416?show=data-center-physical-security-checklist-416&cat=awareness
-\bibitem{sean7}  http://www.sans.org/reading-room/whitepapers/awareness/data-center-physical-security-checklist-416?show=data-center-physical-security-checklist-416\&cat=awareness
+\bibitem{sean7}  \url{http://www.sans.org/reading-room/whitepapers/awareness/data-center-physical-security-checklist-416?show=data-center-physical-security-checklist-416\&cat=awareness}
 
 % [8] http://www.computerworlduk.com/news/mobile-wireless/3262920/vodafone-in-network-outage-following-datacentre-break-in/
-\bibitem{sean8}  http://www.computerworlduk.com/news/mobile-wireless/3262920/vodafone-in-network-outage-following-datacentre-break-in/
+\bibitem{sean8}  \url{http://www.computerworlduk.com/news/mobile-wireless/3262920/vodafone-in-network-outage-following-datacentre-break-in/}
 
 % [9] http://www.datacenterknowledge.com/archives/2008/05/30/failure-rates-in-google-data-centers/
-\bibitem{sean9}  http://www.datacenterknowledge.com/ archives/2008/05/30/failure-rates-in-google-data-centers/
+\bibitem{sean9}  \url{http://www.datacenterknowledge.com/archives/2008/05/30/failure-rates-in-google-data-centers/}
 
 \bibitem{Bas}  Alfred Basta and Melissa Zgola, {\it Database Security}, Delmar Cengage Learning (2011)
 
 \bibitem{raid} Donald, L. (2003). MCSA/MCSE 2006 JumpStart Computer and Network Basics (2nd ed.). Glasgow: SYBEX.
 \bibitem{cloud} Winkler, Vic. "Cloud Computing: Virtual Cloud Security Concerns". Technet Magazine, Microsoft. Retrieved 12 February 2012.
 
-\bibitem{sony} http://www.cbc.ca/news/technology/playstation-data-breach-deemed-in-top-5-ever-1.1059548
-\bibitem{salt} http://www.dshield.org/diary.html?storyid=11110
+\bibitem{sony} \url{http://www.cbc.ca/news/technology/playstation-data-breach-deemed-in-top-5-ever-1.1059548}
+\bibitem{salt} \url{http://www.dshield.org/diary.html?storyid=1111}
 
 \end{thebibliography}
 \end{document}
