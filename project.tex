@@ -5,6 +5,7 @@
 \geometry{a4paper} 
 \usepackage{graphicx}
 \usepackage{anysize}        % allows you to set margins to any size
+\usepackage{balance}
 
 \title{Database Security}
 \author{Catherine Boothman, Oisin De Conduin, Eoin Gillen, \\
@@ -19,14 +20,14 @@ Sean Nolan, John Cahill, Mairtin Mac Colgain}
 \maketitle
 
 \begin{abstract}
-This paper intorduces the concept of database security and the issues surrounding security threats to databases. 
+Database technology has changed over the years and with the advent of cloud computing and web based storage Database Management Systems (DBMS) have become affordable to small business and organisations that would have tradionally been far to small to cover the cost of one.  As more and more of these businesses and organisations rely on database technology to store the information critical to their day to day operation, the security of these databases has become an increasingly more complex and important issue.  The traditional problems associated with databases was the loss of data through physical damage to the on-site database server and making sure employees had correct and appropriate access to relevant data only.  There was minimal, although not negligible, risk of non-authorized access from non-company personnel and damage to a database through internet connections.  However as cloud based DBMS solutions became available, both as a backup to large companies and as an affordable option to others, far more must be done to keep data safe.  This paper outlines the common threats facing databases and the measures taken where possible to project against them and mitigate any potenital risk to data from them.
 \end{abstract}
 
 \end{@twocolumnfalse}
 ]
 
 \section{Introduction}
-Databases and database systems have become a major part of everyday life in modern society.  Nearly everything we interact with and depend on have some kind of dependence on a database \cite{ElmNav}.  From taking money out of the bank to paying tax to ordering products on-line.  For decades at this point nearly every business has made use of some kind of database technology to manage employee records, customer details, product and supplier details.  These are the critical functions of a business and yet they are the simplest and oldest uses of a database.  With the advent of web based applications and information systems technology, the potential use of databases to businesses and, consequently, the reliance of businesses on them has exploded.  Never before has security been such a major issue.  Cloud storage and applications open up efficient space and processing power to smaller businesses and socail organisations who would not have had the turnover for the cost of a traditional DBMS housed on-site.  However with this technology a whole new set of security risks have been introduced by exposing companies private data to the potentially public world of the world wide web.  
+Databases and database systems have become a major part of everyday life in modern society.  Nearly everything we interact with and depend on have some kind of dependence on a database \cite{ElmNav}.  From taking money out of the bank, to paying tax and ordering products on-line.  For decades at this point nearly every business has made use of some kind of database technology to manage employee records, customer details, product and supplier details.  These are the critical functions of a business and yet they are the simplest and oldest uses of a database.  With the advent of web based applications and information systems technology, the potential use of databases to businesses and, consequently, the reliance of businesses on them has exploded.  Never before has security been such a major issue.  Cloud storage and applications open up sufficient space and processing power to smaller businesses and social organisations who would not have had the turnover for the cost of a traditional DBMS housed on-site.  However with this technology a whole new set of security risks have been introduced by exposing companies' private data to the potentially public world of the world wide web.  
 
 Security threats can be roughly categorised into the following three areas; 1) unauthorized data observation, 2) incorrect data modification, and 3) data unavailability.  All businesses and organisations may suffer heavy financial and reputational losses due to unauthorized data observation. Incorrect modifications of data, either intentional or unintentional, result in an incorrect database state and the use of incorrect data may in turn lead to heavy losses.  When data is unavailable, crucial information for the proper functioning of a business or organisation is not readily available when needed \cite{BerSand}, just ask anyone who had an Ulster bank account last year how annoying that is!  
 
@@ -162,6 +163,7 @@ Passwords and other information can be encrypted using a hashing algorithm. This
 
 It is however possible to reverse engineer the passwords from the hashed values if the hashing algorithm is known. This can be done using a dictionary attack, or something similar. To prevent this, passwords can also be salted before they are hashed, by inserting random characters into the password.\cite{salt}
 
+\balance
 \begin{thebibliography}{}
 
 % book
@@ -206,9 +208,7 @@ It is however possible to reverse engineer the passwords from the hashed values 
 \bibitem{sean8}  http://www.computerworlduk.com/news/mobile-wireless/3262920/vodafone-in-network-outage-following-datacentre-break-in/
 
 % [9] http://www.datacenterknowledge.com/archives/2008/05/30/failure-rates-in-google-data-centers/
-\bibitem{sean9}  http://www.datacenterknowledge.com/archives/2008/05/30/failure-rates-in-google-data-centers/
-
-  
+\bibitem{sean9}  http://www.datacenterknowledge.com/ archives/2008/05/30/failure-rates-in-google-data-centers/
 
 \bibitem{Bas}  Alfred Basta and Melissa Zgola, {\it Database Security}, Delmar Cengage Learning (2011)
 
