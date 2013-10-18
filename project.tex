@@ -1,4 +1,4 @@
-\documentclass[11pt]{article}
+\documentclass[11pt, twocolumn]{article}
 
 \usepackage[utf8]{inputenc} 
 \usepackage{geometry}
@@ -14,10 +14,16 @@ Sean Nolan, John Cahill, Mairtin Mac Colgain}
 
 \marginsize{25mm}{25mm}{25mm}{25mm}     % sets the sizes of the margins in the order of {l}{r}{t}{b}
 
+\twocolumn[
+\begin{@twocolumnfalse}
 \maketitle
 
-\section{Abstract}
-Database Security
+\begin{abstract}
+This paper intorduces the concept of database security and the issues surrounding security threats to databases. 
+\end{abstract}
+
+\end{@twocolumnfalse}
+]
 
 \section{Introduction}
 Databases and database systems have become a major part of everyday life in modern society.  Nearly everything we interact with and depend on have some kind of dependence on a database \cite{ElmNav}.  From taking money out of the bank to paying tax to ordering products on-line.  For decades at this point nearly every business has made use of some kind of database technology to manage employee records, customer details, product and supplier details.  These are the critical functions of a business and yet they are the simplest and oldest uses of a database.  With the advent of web based applications and information systems technology, the potential use of databases to businesses and, consequently, the reliance of businesses on them has exploded.  Never before has security been such a major issue.  Cloud storage and applications open up efficient space and processing power to smaller businesses and socail organisations who would not have had the turnover for the cost of a traditional DBMS housed on-site.  However with this technology a whole new set of security risks have been introduced by exposing companies private data to the potentially public world of the world wide web.  
