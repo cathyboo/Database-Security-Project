@@ -11,8 +11,9 @@
 \usepackage[hyphens]{url}
 
 \title{Database Security}
-\author{Catherine Boothman, Oisin De Conduin, Eoin Gillen, \\
-Sean Nolan, John Cahill, Mairtin Mac Colgain}
+\author{Catherine Boothman D12127081, Oisin De Conduin, \\
+Eoin Gillen, Sean Nolan, \\
+John Cahill  D12127121, M\'airtin Mac Colgain D12127151}
 
 \begin{document}
 
@@ -139,7 +140,7 @@ Let us look at other types of information.  Using hash functions on a message cr
 It is however possible to reverse engineer the passwords from the hashed values if the hashing algorithm is known.  This can be done using a dictionary attack or something similar.  To prevent this passwords can also be salted before they are hashed by inserting random characters into them \cite{salt}.
 
 \subsubsection{Database hardening}
-It is extremely important to keep up to date with patches as indicated by the SQL Slammer worm which affected circa 100,000 systems in January 2003 exploiting the buffer overflow problem.  The worm was made possible by a software security vulnerability in SQL Server first reported by Microsoft on July 24, 2002.  A patch had been available from Microsoft for six months prior to the worm's launch but many installations had not applied it.
+It is extremely important to keep up to date with patches as indicated by the SQL Slammer worm which affected circa 100,000 systems in January 2003 exploiting the buffer overflow problem.  The worm was made possible by a software security vulnerability in SQL Server first reported by Microsoft on July 24, 2002 \cite{sql}.  A patch had been available from Microsoft for six months prior to the worm's launch but many installations had not applied it.
 
 Furthermore stored procedures and triggers can lead to privilege escalation and compromise and this should be considered prior to establishing databases.
 
@@ -200,6 +201,7 @@ Finally database processes should be run under dedicated non-privileged accounts
 
 \bibitem{sony} \url{http://www.cbc.ca/news/technology/playstation-data-breach-deemed-in-top-5-ever-1.1059548}
 \bibitem{salt} \url{http://www.dshield.org/diary.html?storyid=1111}
+\bibitem{sql} \url{http://www.giac.org/paper/gsec/3091/ms-sql-slammer-sapphire-worm/105136}
 
 \end{thebibliography}
 \end{document}
